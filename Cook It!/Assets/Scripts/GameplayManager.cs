@@ -134,6 +134,8 @@ public class GameplayManager : MonoBehaviour
                 StartCoroutine(ReadjustDelay(currentCustomer));
                 game.customersServed++;
                 gameObject.GetComponent<CustomerSelect>().enabled = true;
+                gameObject.GetComponent<CustomerSelect>().NextCustomer();
+
                 gameObject.GetComponent<CameraPos>().IsPrepping = false;
                 gameObject.GetComponent<CameraPos>().IsCooking = false;
                 gameObject.GetComponent<GUIManager>().Orders++;
